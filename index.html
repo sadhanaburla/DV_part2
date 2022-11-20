@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Make Force Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="d3.min.js"></script>
+    
+    <script src="part2_main.js"></script>
+
+</head>
+<body>
+<script>
+    d3.json("part2_Sadhana.json").then(function (data){
+        let svg = d3.select('body').append("svg").attr("viewBox","-800 -900 3200 3200")
+        console.log(data)
+        simulate(data,svg) // main function to make network
+    })
+
+</script>
+
+</body>
+</html>
